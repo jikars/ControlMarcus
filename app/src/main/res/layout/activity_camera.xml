@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_picture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/captured_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_ok_green"
+            android:id="@+id/save_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_camera_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="14">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:background="#000">
+
+            <GridLayout
+                android:paddingStart="15dp"
+                android:id="@+id/contenedorBotonesLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:columnCount="2"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btnFrontSide"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_row="0"
+                    android:clickable="true"
+                    android:src="@drawable/car_front_icon" />
+
+                <ImageView
+                    android:id="@+id/arrowFrontSide"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_column="1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="-14dp"
+                    android:layout_row="0"
+                    android:src="@drawable/arrowgreen"
+                    android:visibility="invisible" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btnRightSide"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_row="1"
+                    android:clickable="true"
+                    android:src="@drawable/car_right_side_icon" />
+
+                <ImageView
+                    android:id="@+id/arrowRightSide"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_column="1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="-14dp"
+                    android:layout_row="1"
+                    android:src="@drawable/arrowgreen"
+                    android:visibility="invisible" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btnLeftSide"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_row="2"
+                    android:clickable="true"
+                    android:src="@drawable/car_left_side_icon" />
+
+                <ImageView
+                    android:id="@+id/arrowLeftSide"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_column="1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="-14dp"
+                    android:layout_row="2"
+                    android:src="@drawable/arrowgreen"
+                    android:visibility="invisible" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btnPostSide"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_row="3"
+                    android:clickable="true"
+                    android:src="@drawable/car_post_icon" />
+
+                <ImageView
+                    android:id="@+id/arrowPostSide"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_column="1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="-14dp"
+                    android:layout_row="3"
+                    android:src="@drawable/arrowgreen"
+                    android:visibility="invisible" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btnFreeSide"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_row="4"
+                    android:clickable="true"
+                    android:src="@drawable/car_free_icon" />
+
+                <ImageView
+                    android:id="@+id/arrowFreeSide"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_column="1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="-14dp"
+                    android:layout_row="4"
+                    android:src="@drawable/arrowgreen"
+                    android:visibility="invisible" />
+
+            </GridLayout>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="#87e908" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10.5"
+            >
+
+            <net.gcatech.cameramanager.implementation.cameramanager.CameraView
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <FrameLayout
+                android:id="@+id/contentGhost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cotenedorRigth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:background="#000"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_cancel_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_cancel_green" />
+
+            <Button
+                android:id="@+id/captureImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/btn_camara_green" />
+
+            <Button
+                android:id="@+id/btn_ok_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/btn_ok_green"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
